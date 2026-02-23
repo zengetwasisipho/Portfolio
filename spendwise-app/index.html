@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SpendWise App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>SpendWise<span>.</span></h1>
+      <div class="total-box">
+        <small>MONTHLY TOTAL</small>
+        <h2 id="total-amount">R0.00</h2>
+      </div>
+    </header>
+
+    <section class="input-area">
+      <input type="text" id="sub-name" placeholder="Subscription Name (e.g. Netflix)">
+      <input type="number" id="sub-cost" placeholder="Cost ($)">
+      <button id="add-btn">Add</button>
+    </section>
+
+    <ul id="sub-list" class="sub-list">
+      </ul>
+    
+    <a href="../index.html" class="exit-btn">Back to Portfolio</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

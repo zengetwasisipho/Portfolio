@@ -1,0 +1,82 @@
+:root {
+  --bg: #0a0a0a;
+  --card: #141414;
+  --accent: #22c55e; /* Finance Green */
+  --text: #ffffff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 500px;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1 span { color: var(--accent); }
+
+.total-box { text-align: right; }
+.total-box h2 { color: var(--accent); font-size: 2rem; }
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  flex: 1;
+}
+
+button#add-btn {
+  background: var(--accent);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sub-list { list-style: none; padding: 0; }
+.sub-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #222;
+  animation: fadeIn 0.3s ease;
+}
+
+.delete-btn { color: #ef4444; cursor: pointer; background: none; border: none; }
+
+.exit-btn {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } }
