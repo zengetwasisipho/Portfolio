@@ -1,11 +1,11 @@
 :root {
-  --bg: #0a0a0a;           /* Dark background */
-  --fg: #ffffff;           /* Main text */
+  --bg: #4d4c46;           /* Dark background */
+  --fg: #ff9eff;           /* Main text */
   --gray: #b0b0b0;         /* Subtle gray */
-  --accent: #7f5af0;       /* Soft purple accent */
+  --accent: #ddd0e3;       /* Soft purple accent */
   --border: #1a1a1a;       /* Section borders */
   --font-main: 'Inter', sans-serif;
-  --logo-bg: #c4a3ff;      /* Cloud-like background for logo */
+  --logo-bg: #fcdeaa;      /* Cloud-like background for logo */
 }
 
 /* RESET */
@@ -53,8 +53,6 @@ body {
   background: var(--logo-bg);
   padding: 0.5rem 1.2rem;
   border-radius: 50% 60% 60% 50% / 50% 60% 60% 50%; /* cloud-like shape */
-  box-shadow: 0 4px 10px rgba(196,163,255,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   display: inline-block;
 }
@@ -73,7 +71,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: var(--accent);
+  color: #eb55bf;
   letter-spacing: 1px;
 }
 
@@ -94,21 +92,11 @@ body {
   opacity: 0.85;
 }
 
-/* HERO */
-.hero {
-  padding: 100px 0;
-  min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1f1f1f 100%);
-  position: relative;
-  z-index: 1;
-}
+
 
 .name-display {
   font-size: clamp(3rem, 10vw, 6rem);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -2px;
   margin-bottom: 1rem;
   color: var(--fg);
@@ -190,7 +178,6 @@ h3.label {
 
 /* PROJECTS */
 .projects {
-  background: #1a1a1a; /* lighter black background */
   padding: 6rem 0;
 }
 
@@ -201,7 +188,7 @@ h3.label {
 
 .project-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2rem;
 }
 
@@ -211,7 +198,7 @@ h3.label {
   align-items: flex-start;
   padding: 2rem;
   border-radius: 12px;
-  border: 2px solid #7f5af0;
+  border: 2px solid #2a2b2a;
   background: #1e1e1e;
   text-decoration: none;
   color: #f0f0f0;
@@ -221,7 +208,7 @@ h3.label {
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: #9a7fff;
+  border-color: #f5a8d0;
   box-shadow: none;
 }
 
@@ -353,8 +340,8 @@ h3.label {
 .footer {
   text-align: center;
   padding: 2rem 0;
-  color: #d17dbc;
-  background: #e2e2e2;
+  color: white;
+  background: black;
   border-top: 1px solid var(--border);
 }
 
