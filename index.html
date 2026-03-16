@@ -2,186 +2,142 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Sisipho | Software Engineer | UI/UX Designer</title>
-
 <link rel="stylesheet" href="style.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 <nav class="nav">
-
-<div class="container nav-content">
-
-<div class="logo">SZ_</div>
-
-<div class="nav-links">
-
-<a href="#about">About</a>
-<a href="#projects">Work</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-<a href="resume.pdf" class="btn-resume">Download My CV</a>
-
-</div>
-
-</div>
-
+  <div class="container nav-content">
+    <div class="logo">SZ_</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" class="btn-resume">Download My CV</a>
+    </div>
+  </div>
 </nav>
 
 <main>
 
-<section class="hero container">
+  <!-- HERO SECTION -->
+  <section class="hero container">
+    <div class="hero-layout">
 
-<h1 class="name-display">
-Hello,<br>
-I'm Sisipho.
-</h1>
+      <!-- TEXT -->
+      <div class="hero-text">
+        <h1 class="name-display">
+          Hello,<br>
+          I'm Sisipho.
+        </h1>
+        <h2 class="role-text">Software Engineer | UI/UX Designer</h2>
+        <p class="description">
+          I build practical software that solves real problems and improves everyday workflows.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-filled">View Work</a>
+          <a href="#contact" class="btn btn-outline">Get in touch</a>
+        </div>
+      </div>
 
-<h2 class="role-text">Software Engineer | UI/UX Designer</h2>
+      <!-- IMAGE -->
+      <div class="hero-image">
+        <img src="profile.png" alt="Sisipho">
+      </div>
 
-<p class="description">
-I build practical software that solves real problems and improves everyday workflows.
-</p>
+    </div>
 
-<div class="hero-btns">
+    <!-- Floating circles -->
+    <div class="floating-circle" style="--i:0; --size:60px; --x:20%; --y:30%; --speed:6s;"></div>
+    <div class="floating-circle" style="--i:1; --size:40px; --x:70%; --y:60%; --speed:8s;"></div>
+    <div class="floating-circle" style="--i:2; --size:80px; --x:50%; --y:10%; --speed:10s;"></div>
+    <div class="floating-circle" style="--i:3; --size:30px; --x:80%; --y:20%; --speed:5s;"></div>
+  </section>
 
-<a href="#projects" class="btn btn-filled">View Work</a>
-<a href="#contact" class="btn btn-outline">Get in touch</a>
+  <!-- ABOUT -->
+  <section id="about" class="about container">
+    <h3 class="label">ABOUT ME</h3>
+    <p>
+      I’m a developer focused on building thoughtful, reliable software.
+      My work emphasizes clean architecture and intuitive user experience.
+    </p>
+  </section>
 
-</div>
-
-</section>
-
-
-<section id="about" class="about container">
-
-<h3 class="label">ABOUT ME</h3>
-
-<p>
-I’m a developer focused on building thoughtful, reliable software.
-My work emphasizes clean architecture and intuitive user experience.
-</p>
-
-</section>
-
-
+ <!-- PROJECTS -->
 <section id="projects" class="projects container">
-
-<h3 class="label">SELECTED PROJECTS</h3>
-
-<div class="project-list">
-
-
-<a href="spendwise.html" class="project-card">
-
-<img src="spendwise-preview.jpg">
-
-<div class="project-info">
-
-<span class="project-num">01</span>
-
-<h4>SpendWise Tracker</h4>
-
-<p>
-A subscription management tool helping users track recurring expenses.
-</p>
-
+  <h3 class="label">SELECTED PROJECTS</h3>
+ <div class="project-card">
+  <img src="/home/wtc3/Pictures/Screenshots/Screenshot from 2026-03-16 15-56-33.png" 
+       alt="SpendWise Preview" class="project-img">
+  <div class="project-info">
+    <span class="project-num">01</span>
+    <h4>SpendWise Tracker</h4>
+    <p>A subscription management tool helping users track recurring expenses.</p>
+    <a href="spendwise-app/index.html" class="btn btn-filled" target="_blank">OPEN APP</a>
+  </div>
 </div>
+    </a>
 
-</a>
+    <a href="automator.html" class="project-card">
+      <img src="automator-preview.jpg" alt="Automator Preview">
+      <div class="project-info">
+        <span class="project-num">02</span>
+        <h4>Daily Task Automator</h4>
+        <p>Chrome extension automating repetitive workflow tasks.</p>
+      </div>
+    </a>
 
-
-<a href="automator.html" class="project-card">
-
-<img src="automator-preview.jpg">
-
-<div class="project-info">
-
-<span class="project-num">02</span>
-
-<h4>Daily Task Automator</h4>
-
-<p>
-Chrome extension automating repetitive workflow tasks.
-</p>
-
-</div>
-
-</a>
-
-</div>
-
+  </div>
 </section>
+  <!-- SKILLS -->
+  <section id="skills" class="skills container">
+    <h3 class="label">SKILLS</h3>
+    <div class="skills-grid">
+      <div class="skill">
+        <h4>Frontend</h4>
+        <p>HTML, CSS, JavaScript, React</p>
+      </div>
+      <div class="skill">
+        <h4>Backend</h4>
+        <p>Node.js, Express, PostgreSQL</p>
+      </div>
+      <div class="skill">
+        <h4>Tools</h4>
+        <p>Git, GitHub, VS Code</p>
+      </div>
+      <div class="skill">
+        <h4>Concepts</h4>
+        <p>REST APIs, Testing, Agile</p>
+      </div>
+    </div>
+  </section>
 
-
-<section id="skills" class="skills container">
-
-<h3 class="label">SKILLS</h3>
-
-<div class="skills-grid">
-
-<div class="skill">
-<h4>Frontend</h4>
-<p>HTML, CSS, JavaScript, React</p>
-</div>
-
-<div class="skill">
-<h4>Backend</h4>
-<p>Node.js, Express, PostgreSQL</p>
-</div>
-
-<div class="skill">
-<h4>Tools</h4>
-<p>Git, GitHub, VS Code</p>
-</div>
-
-<div class="skill">
-<h4>Concepts</h4>
-<p>REST APIs, Testing, Agile</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="contact" class="contact container">
-
-<h3 class="label">CONTACT</h3>
-
-<p>Feel free to reach out if you'd like to collaborate.</p>
-
-<div class="contact-links">
-
-<a href="#">Email</a>
-<a href="#">GitHub</a>
-<a href="#">LinkedIn</a>
-
-</div>
-
-</section>
+  <!-- CONTACT -->
+  <section id="contact" class="contact container">
+    <h3 class="label">CONTACT</h3>
+    <p>Feel free to reach out if you'd like to collaborate.</p>
+    <div class="contact-links">
+      <a href="#">Email</a>
+      <a href="#">GitHub</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </section>
 
 </main>
 
-
+<!-- FOOTER -->
 <footer class="footer">
-
-<div class="container">
-
-<p>© 2026 Sisipho</p>
-
-</div>
-
+  <div class="container">
+    <p>© 2026 Sisipho</p>
+  </div>
 </footer>
 
 </body>
-
 </html>

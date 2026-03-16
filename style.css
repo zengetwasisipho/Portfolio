@@ -360,3 +360,75 @@ h3.label {
 html {
   scroll-behavior: smooth;
 }
+
+
+/* floating circles */
+.floating-circle { position:absolute; border-radius:50%; background:rgba(127,90,240,0.15); animation: float var(--speed) ease-in-out infinite; top:var(--y); left:var(--x); width:var(--size); height:var(--size); }
+@keyframes float { 0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);} }
+
+/* HERO IMAGE NEXT TO TITLE */
+
+.hero-layout{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:3rem;
+  flex-wrap:wrap;
+}
+
+/* profile image border illusion */
+
+.hero-image img{
+  width:240px;
+  height:240px;
+  aspect-ratio:1 / 1;   /* guarantees perfect circle */
+  object-fit:cover;
+  border-radius:50%;
+
+  /* border illusion */
+  border:5px solid #2a2b2a;
+  box-shadow:0 0 0 8px #6e5a7a;
+
+  transition:transform 0.25s ease;
+}
+
+
+.hero-image img:hover{
+  transform:translateY(-4px) scale(1.02);
+}
+
+/* floating profile frame */
+
+.hero-image{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-image::before{
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#7f5af0,#ff6ec7);
+  opacity:0.15;
+  animation:profileFloat 6s ease-in-out infinite;
+}
+
+/* keep image above the frame */
+.hero-image img{
+  position:relative;
+  z-index:2;
+}
+
+/* gentle floating animation */
+@keyframes profileFloat{
+  0%,100%{
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(-10px);
+  }
+}
