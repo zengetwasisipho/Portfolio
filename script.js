@@ -3,11 +3,11 @@
 // SELECT ELEMENTS
 const nav = document.querySelector(".nav");
 const reveals = document.querySelectorAll(".reveal");
+const landingAnimation = document.getElementById("landing");
+let hasScrolled = false;
 
-// ========================= SCROLL EVENT =========================
-window.addEventListener("scroll", () => {
-
-  // ===== REVEAL ELEMENTS =====
+// ========================= FUNCTION TO CHECK AND REVEAL ELEMENTS =========================
+function checkReveals() {
   reveals.forEach((el) => {
     const top = el.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
@@ -16,6 +16,32 @@ window.addEventListener("scroll", () => {
       el.classList.add("active");
     }
   });
+}
+
+// ========================= AUTO-HIDE LANDING ANIMATION =========================
+window.addEventListener("load", () => {
+  checkReveals();
+  
+  // Auto-hide landing animation after 3 seconds
+  setTimeout(() => {
+    if (landingAnimation) {
+      landingAnimation.classList.add("hidden");
+    }
+  }, 3000);
+});
+
+// ========================= LANDING ANIMATION FADE OUT ON SCROLL =========================
+window.addEventListener("scroll", () => {
+  // Hide landing animation on first scroll
+  if (!hasScrolled && window.scrollY > 0) {
+    hasScrolled = true;
+    if (landingAnimation) {
+      landingAnimation.classList.add("hidden");
+    }
+  }
+
+  // ===== REVEAL ELEMENTS =====
+  checkReveals();
 
   // ===== NAVBAR SCROLL EFFECT =====
   if (window.scrollY > 50) { // change after 50px scroll
@@ -24,7 +50,7 @@ window.addEventListener("scroll", () => {
     nav.classList.remove("scrolled");
   }
 
-});
+}, { passive: true });
 
 // ========================= SMOOTH SCROLL FOR NAV LINKS =========================
 const navLinks = document.querySelectorAll(".nav-links a[href^='#']");

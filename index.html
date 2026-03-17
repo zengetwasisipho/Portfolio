@@ -14,7 +14,36 @@
 <!-- ================= NAVIGATION ================= -->
 <nav class="nav">
   <div class="container nav-content">
-    <div class="logo">SZ_</div>
+    <div class="logo">
+      <svg viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+        <!-- S letter with gradient -->
+        <defs>
+          <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#7f5af0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ff6ec7;stop-opacity:1" />
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        
+        <!-- Stylized S -->
+        <text x="10" y="33" font-size="28" font-weight="700" fill="url(#logoGradient)" 
+              font-family="Inter, sans-serif" class="logo-letter" filter="url(#glow)">S</text>
+        
+        <!-- Stylized Z -->
+        <text x="30" y="33" font-size="28" font-weight="700" fill="url(#logoGradient)" 
+              font-family="Inter, sans-serif" class="logo-letter" filter="url(#glow)">Z</text>
+        
+        <!-- Accent line underscore -->
+        <line x1="55" y1="38" x2="72" y2="38" stroke="#A6F1E0" stroke-width="2.5" 
+              stroke-linecap="round" class="logo-accent"/>
+      </svg>
+    </div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Work</a>
@@ -26,6 +55,101 @@
 </nav>
 
 <main>
+
+  <!-- ================= LANDING ANIMATION ================= -->
+  <section class="landing-animation" id="landing">
+    <div class="animation-container">
+      <div class="illustration-wrapper">
+        <!-- Cute Code Illustration -->
+        <div class="cute-illustration code-illustration">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Monitor -->
+            <rect x="20" y="20" width="160" height="120" rx="8" fill="none" stroke="#ff9eff" stroke-width="3"/>
+            <!-- Screen -->
+            <rect x="30" y="30" width="140" height="90" fill="#1a1a2e" rx="4"/>
+            <!-- Code lines -->
+            <line x1="40" y1="45" x2="75" y2="45" stroke="#7f5af0" stroke-width="2" stroke-linecap="round"/>
+            <line x1="40" y1="60" x2="100" y2="60" stroke="#ff6ec7" stroke-width="2" stroke-linecap="round"/>
+            <line x1="40" y1="75" x2="85" y2="75" stroke="#7f5af0" stroke-width="2" stroke-linecap="round"/>
+            <line x1="40" y1="90" x2="95" y2="90" stroke="#ff6ec7" stroke-width="2" stroke-linecap="round"/>
+            <line x1="40" y1="105" x2="70" y2="105" stroke="#7f5af0" stroke-width="2" stroke-linecap="round"/>
+            <!-- Monitor stand -->
+            <rect x="85" y="150" width="30" height="30" fill="none" stroke="#ff9eff" stroke-width="2" rx="2"/>
+            <!-- Cursor -->
+            <g class="cursor-blink" transform="translate(110, 65)">
+              <rect width="3" height="15" fill="#7f5af0"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Cute Design Illustration -->
+        <div class="cute-illustration design-illustration">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Palette circle background -->
+            <circle cx="100" cy="100" r="85" fill="none" stroke="#ddd0e3" stroke-width="2" opacity="0.3"/>
+            <!-- Paint Palette -->
+            <ellipse cx="100" cy="110" rx="50" ry="45" fill="none" stroke="#ff9eff" stroke-width="3"/>
+            <!-- Paint dots -->
+            <circle cx="65" cy="75" r="8" fill="#7f5af0" class="paint-dot" style="--delay: 0s"/>
+            <circle cx="100" cy="65" r="8" fill="#ff6ec7" class="paint-dot" style="--delay: 0.2s"/>
+            <circle cx="135" cy="75" r="8" fill="#6AECE1" class="paint-dot" style="--delay: 0.4s"/>
+            <circle cx="55" cy="110" r="8" fill="#a78bfa" class="paint-dot" style="--delay: 0.6s"/>
+            <circle cx="145" cy="110" r="8" fill="#f5a8d0" class="paint-dot" style="--delay: 0.8s"/>
+            <circle cx="75" cy="140" r="8" fill="#6AECE1" class="paint-dot" style="--delay: 1s"/>
+            <circle cx="125" cy="140" r="8" fill="#7f5af0" class="paint-dot" style="--delay: 1.2s"/>
+            <!-- Brush -->
+            <g class="brush-stroke">
+              <rect x="150" y="50" width="8" height="50" fill="#d4af37" rx="4"/>
+              <ellipse cx="154" cy="55" rx="12" ry="8" fill="#e8d5a4" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Cute Bulb Illustration -->
+        <div class="cute-illustration idea-illustration">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Glow effect -->
+            <circle cx="100" cy="80" r="55" fill="#ff9eff" opacity="0.15" class="bulb-glow"/>
+            <!-- Bulb -->
+            <path d="M 100 30 C 120 30 130 45 130 60 C 130 75 120 90 100 95 L 100 95 C 80 90 70 75 70 60 C 70 45 80 30 100 30 Z" 
+                  fill="none" stroke="#ff9eff" stroke-width="3" stroke-linejoin="round"/>
+            <!-- Inner fill -->
+            <path d="M 100 30 C 120 30 130 45 130 60 C 130 75 120 90 100 95 L 100 95 C 80 90 70 75 70 60 C 70 45 80 30 100 30 Z" 
+                  fill="#ff9eff" opacity="0.2"/>
+            <!-- Base -->
+            <rect x="90" y="95" width="20" height="8" fill="none" stroke="#ff9eff" stroke-width="2" rx="2"/>
+            <!-- Threaded part -->
+            <rect x="85" y="103" width="30" height="20" fill="none" stroke="#ff9eff" stroke-width="2" rx="2"/>
+            <line x1="85" y1="108" x2="115" y2="108" stroke="#ff9eff" stroke-width="1"/>
+            <line x1="85" y1="113" x2="115" y2="113" stroke="#ff9eff" stroke-width="1"/>
+            <!-- Sparkles -->
+            <g class="sparkle" style="--delay: 0s">
+              <circle cx="50" cy="40" r="3" fill="#7f5af0"/>
+              <circle cx="50" cy="40" r="8" fill="none" stroke="#7f5af0" opacity="0.5"/>
+            </g>
+            <g class="sparkle" style="--delay: 0.3s">
+              <circle cx="150" cy="50" r="3" fill="#ff6ec7"/>
+              <circle cx="150" cy="50" r="8" fill="none" stroke="#ff6ec7" opacity="0.5"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="landing-text">
+        <h2 class="landing-title">Ready to build something amazing?</h2>
+        <p class="landing-subtitle">Scroll down to explore my work</p>
+        <div class="scroll-indicator">
+          <span>Scroll</span>
+          <div class="scroll-arrow">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 14L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 14L15 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ================= HERO SECTION ================= -->
   <section class="hero container reveal">
@@ -57,11 +181,133 @@
 
   <!-- ================= ABOUT ================= -->
   <section id="about" class="about container reveal">
-    <h3 class="label">ABOUT ME</h3>
-    <p>
-      I’m a developer focused on building thoughtful, reliable software.
-      My work emphasizes clean architecture and intuitive user experience.
-    </p>
+    <div class="about-header">
+      <h3 class="label">ABOUT ME</h3>
+      <p class="about-subtitle">Get to know the person behind the code</p>
+    </div>
+
+    <div class="about-content">
+      <!-- Main Bio -->
+      <div class="about-bio">
+        <div class="bio-text">
+          <p class="bio-intro">
+            I'm a final-year software engineering student at WeThinkCode, a rigorous coding bootcamp focused on practical development skills. Passionate about creating beautiful, functional digital experiences through clean code and thoughtful design.
+          </p>
+          
+          <p>
+            My education at WeThinkCode has given me hands-on experience in full-stack development and UI/UX design. I've worked on diverse projects—from building responsive web applications to designing intuitive user interfaces—each one pushing me to solve real-world problems with creative solutions.
+          </p>
+
+          <p>
+            I believe great software is where engineering excellence meets user-centered design. As I approach graduation, I'm eager to bring my skills, creativity, and dedication to meaningful projects that make a real impact. I'm passionate about continuous learning and excited about what's next in my tech journey.
+          </p>
+        </div>
+
+        <div class="about-highlights">
+          <h4>Key Strengths</h4>
+          <div class="qualities-grid">
+            <div class="quality-item">
+              <div class="quality-number">01</div>
+              <div class="quality-content">
+                <h5>Problem Solver</h5>
+                <p>I approach challenges with curiosity and creativity, breaking down complex problems into elegant solutions.</p>
+              </div>
+            </div>
+            <div class="quality-item">
+              <div class="quality-number">02</div>
+              <div class="quality-content">
+                <h5>Detail Oriented</h5>
+                <p>Every pixel, every line of code matters. I obsess over the details that make products exceptional.</p>
+              </div>
+            </div>
+            <div class="quality-item">
+              <div class="quality-number">03</div>
+              <div class="quality-content">
+                <h5>Fast Learner</h5>
+                <p>I quickly grasp new technologies and methodologies, adapting to challenges with enthusiasm and determination.</p>
+              </div>
+            </div>
+            <div class="quality-item">
+              <div class="quality-number">04</div>
+              <div class="quality-content">
+                <h5>Collaborative</h5>
+                <p>I thrive in team environments, communicating ideas clearly and learning from diverse perspectives.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats & Fun Facts -->
+      <div class="about-stats">
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Years at WeThinkCode</div>
+            <p>Rigorous training in software development</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Projects Completed</div>
+            <p>From academic assignments to personal builds</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Commitment</div>
+            <p>Dedicated to excellence and continuous growth</p>
+          </div>
+        </div>
+
+        <div class="fun-facts">
+          <h4>Beyond the Code</h4>
+          <div class="facts-list">
+            <div class="fact-item">
+              <div class="fact-visual">
+                <img src="gaming.jpg" alt="Gaming" class="fact-image">
+              </div>
+              <div class="fact-content">
+                <span class="fact-icon">🎮</span>
+                <p>Gaming enthusiast who studies game design and understands player experience mechanics</p>
+              </div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-content">
+                <span class="fact-icon">📚</span>
+                <p>Lifelong learner exploring tech blogs, design principles, and emerging technologies</p>
+              </div>
+              <div class="fact-visual">
+                <img src="reading.jpg" alt="Reading" class="fact-image">
+              </div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-visual">
+                <img src="music.jpg" alt="Music" class="fact-image">
+              </div>
+              <div class="fact-content">
+                <span class="fact-icon">🎵</span>
+                <p>Believer that good UI design flows like music—intuitive, seamless, and satisfying</p>
+              </div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-content">
+                <span class="fact-icon">🌍</span>
+                <p>Coffee lover and tech explorer, passionate about building tools that improve people's lives</p>
+              </div>
+              <div class="fact-visual">
+                <img src="coffee.jpg" alt="Coffee" class="fact-image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="about-cta">
+      <h3>Let's collaborate and build something great</h3>
+      <p>I'm looking for internship opportunities and exciting projects to apply my skills. If you have a project in mind or want to discuss technology and design, I'd love to connect!</p>
+      <a href="#contact" class="btn btn-filled">Get In Touch</a>
+    </div>
   </section>
 
   <!-- ================= PROJECTS ================= -->
@@ -73,18 +319,8 @@
       <div class="project-info">
         <span class="project-num">01</span>
         <h4>SpendWise Tracker</h4>
-        <p>A subscription management tool helping users track recurring expenses.</p>
-        <a href="https://yourusername.github.io/spendwise-app/" class="btn btn-filled" target="_blank">OPEN APP</a>
-      </div>
-    </div>
-
-    <div class="project-card reveal">
-      <img src="automator-preview.jpg" alt="Automator Preview" class="project-img">
-      <div class="project-info">
-        <span class="project-num">02</span>
-        <h4>Daily Task Automator</h4>
-        <p>Chrome extension automating repetitive workflow tasks.</p>
-        <a href="automator.html" class="btn btn-filled" target="_blank">OPEN APP</a>
+        <p>A subscription management tool helping users track recurring expenses and manage their finances effectively.</p>
+        <a href="https://zengetwasisipho.github.io/spendwise-app/" class="btn btn-filled" target="_blank">VIEW PROJECT</a>
       </div>
     </div>
 
@@ -92,50 +328,109 @@
 
   <!-- ================= SKILLS ================= -->
 <section id="skills" class="skills reveal">
-  <h3 class="label">SKILLS</h3>
-  <div class="skills-carousel-wrapper">
-    <div class="skill">
-      <h4>Frontend</h4>
-      <p>HTML, CSS, JavaScript, React</p>
+  <div class="skills-header">
+    <h3 class="label">EXPERTISE</h3>
+    <p class="skills-subtitle">A blend of technical prowess and creative design thinking</p>
+  </div>
+  
+  <div class="skills-container">
+    <div class="skills-category">
+      <h4 class="category-title">💻 Development</h4>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-icon">◇</div>
+          <h5>Frontend</h5>
+          <p>HTML, CSS, JavaScript, React</p>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon">◇</div>
+          <h5>Backend</h5>
+          <p>Node.js, Express, PostgreSQL</p>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon">◇</div>
+          <h5>Tools & Workflow</h5>
+          <p>Git, GitHub, VS Code, Agile</p>
+        </div>
+        <div class="skill-item">
+          <div class="skill-icon">◇</div>
+          <h5>Architecture</h5>
+          <p>REST APIs, Testing, Design Patterns</p>
+        </div>
+      </div>
     </div>
-    <div class="skill">
-      <h4>Backend</h4>
-      <p>Node.js, Express, PostgreSQL</p>
-    </div>
-    <div class="skill">
-      <h4>Tools</h4>
-      <p>Git, GitHub, VS Code</p>
-    </div>
-    <div class="skill">
-      <h4>Concepts</h4>
-      <p>REST APIs, Testing, Agile</p>
-    </div>
-    <div class="skill uiux">
-      <h4>UI Design</h4>
-      <p>Figma, Adobe XD, Wireframing, Prototyping</p>
-    </div>
-    <div class="skill uiux">
-      <h4>UX Design</h4>
-      <p>User Research, Usability Testing, Interaction Design, Information Architecture</p>
+
+    <div class="skills-category">
+      <h4 class="category-title">🎨 Design</h4>
+      <div class="skills-grid">
+        <div class="skill-item design-item">
+          <div class="skill-icon">✦</div>
+          <h5>UI Design</h5>
+          <p>Figma, Adobe XD, Wireframing, Prototyping</p>
+        </div>
+        <div class="skill-item design-item">
+          <div class="skill-icon">✦</div>
+          <h5>UX Design</h5>
+          <p>User Research, Usability Testing, IA</p>
+        </div>
+        <div class="skill-item design-item">
+          <div class="skill-icon">✦</div>
+          <h5>Visual Design</h5>
+          <p>Color Theory, Typography, Branding</p>
+        </div>
+        <div class="skill-item design-item">
+          <div class="skill-icon">✦</div>
+          <h5>Interaction Design</h5>
+          <p>Micro-interactions, Animation, Transitions</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
   <!-- ================= CONTACT ================= -->
   <section id="contact" class="contact container reveal">
-    <h3 class="label">CONTACT</h3>
-    <p>Feel free to reach out if you'd like to collaborate.</p>
-    <br>
-    <div class="contact-links reveal">
-      <a href="zengetwasisipho@gmail.com">Email</a>
-      <a href="https://github.com/zengetwasisipho" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/yourprofile/" target="_blank">LinkedIn</a>
+    <div class="contact-header">
+      <h3 class="label">GET IN TOUCH</h3>
+      <p class="contact-intro">Let's collaborate and create something amazing together</p>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="info-card">
+          <div class="info-icon">✉️</div>
+          <h4>Email</h4>
+          <p>Reach out for inquiries and opportunities</p>
+          <a href="mailto:zengetwasisipho@gmail.com" class="contact-link">zengetwasisipho@gmail.com</a>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">💼</div>
+          <h4>GitHub</h4>
+          <p>Check out my projects and contributions</p>
+          <a href="https://github.com/zengetwasisipho" target="_blank" class="contact-link">github.com/zengetwasisipho</a>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">🔗</div>
+          <h4>LinkedIn</h4>
+          <p>Connect with me professionally</p>
+          <a href="https://www.linkedin.com/in/yourprofile/" target="_blank" class="contact-link">linkedin.com/in/yourprofile</a>
+        </div>
+      </div>
+
+      <div class="contact-cta">
+        <h3>Ready to work together?</h3>
+        <p>Feel free to reach out through any of the channels above. I'm always excited about new projects and opportunities!</p>
+        <a href="mailto:zengetwasisipho@gmail.com" class="btn btn-filled">Start a Conversation</a>
+      </div>
     </div>
   </section>
 
 </main>
 
 <!-- ================= FOOTER ================= -->
-<footer class="footer reveal">
+<footer class="footer">
   <div class="container">
     <p>© 2026 Sisipho Zengetwa</p>
   </div>
