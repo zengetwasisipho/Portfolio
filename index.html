@@ -4,14 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sisipho | Software Engineer | UI/UX Designer</title>
+<title>Sisipho Zengetwa | Portfolio</title>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- ================= NAVIGATION ================= -->
 <nav class="nav">
   <div class="container nav-content">
     <div class="logo">SZ_</div>
@@ -27,8 +27,8 @@
 
 <main>
 
-  <!-- HERO SECTION -->
-  <section class="hero container">
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero container reveal">
     <div class="hero-layout">
 
       <!-- TEXT -->
@@ -48,21 +48,15 @@
       </div>
 
       <!-- IMAGE -->
-      <div class="hero-image">
+      <div class="hero-image reveal">
         <img src="profile.png" alt="Sisipho">
       </div>
 
     </div>
-
-    <!-- Floating circles -->
-    <div class="floating-circle" style="--i:0; --size:60px; --x:20%; --y:30%; --speed:6s;"></div>
-    <div class="floating-circle" style="--i:1; --size:40px; --x:70%; --y:60%; --speed:8s;"></div>
-    <div class="floating-circle" style="--i:2; --size:80px; --x:50%; --y:10%; --speed:10s;"></div>
-    <div class="floating-circle" style="--i:3; --size:30px; --x:80%; --y:20%; --speed:5s;"></div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="about container">
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="about container reveal">
     <h3 class="label">ABOUT ME</h3>
     <p>
       I’m a developer focused on building thoughtful, reliable software.
@@ -70,74 +64,84 @@
     </p>
   </section>
 
- <!-- PROJECTS -->
-<section id="projects" class="projects container">
-  <h3 class="label">SELECTED PROJECTS</h3>
- <div class="project-card">
-  <img src="/home/wtc3/Pictures/Screenshots/Screenshot from 2026-03-16 15-56-33.png" 
-       alt="SpendWise Preview" class="project-img">
-  <div class="project-info">
-    <span class="project-num">01</span>
-    <h4>SpendWise Tracker</h4>
-    <p>A subscription management tool helping users track recurring expenses.</p>
-    <a href="spendwise-app/index.html" class="btn btn-filled" target="_blank">OPEN APP</a>
-  </div>
-</div>
-    </a>
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="projects container reveal">
+    <h3 class="label">SELECTED PROJECTS</h3>
 
-    <a href="automator.html" class="project-card">
-      <img src="automator-preview.jpg" alt="Automator Preview">
+    <div class="project-card reveal">
+      <img src="images/spendwise.png" alt="SpendWise Preview" class="project-img">
+      <div class="project-info">
+        <span class="project-num">01</span>
+        <h4>SpendWise Tracker</h4>
+        <p>A subscription management tool helping users track recurring expenses.</p>
+        <a href="https://yourusername.github.io/spendwise-app/" class="btn btn-filled" target="_blank">OPEN APP</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <img src="automator-preview.jpg" alt="Automator Preview" class="project-img">
       <div class="project-info">
         <span class="project-num">02</span>
         <h4>Daily Task Automator</h4>
         <p>Chrome extension automating repetitive workflow tasks.</p>
-      </div>
-    </a>
-
-  </div>
-</section>
-  <!-- SKILLS -->
-  <section id="skills" class="skills container">
-    <h3 class="label">SKILLS</h3>
-    <div class="skills-grid">
-      <div class="skill">
-        <h4>Frontend</h4>
-        <p>HTML, CSS, JavaScript, React</p>
-      </div>
-      <div class="skill">
-        <h4>Backend</h4>
-        <p>Node.js, Express, PostgreSQL</p>
-      </div>
-      <div class="skill">
-        <h4>Tools</h4>
-        <p>Git, GitHub, VS Code</p>
-      </div>
-      <div class="skill">
-        <h4>Concepts</h4>
-        <p>REST APIs, Testing, Agile</p>
+        <a href="automator.html" class="btn btn-filled" target="_blank">OPEN APP</a>
       </div>
     </div>
+
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact container">
+  <!-- ================= SKILLS ================= -->
+<section id="skills" class="skills reveal">
+  <h3 class="label">SKILLS</h3>
+  <div class="skills-carousel-wrapper">
+    <div class="skill">
+      <h4>Frontend</h4>
+      <p>HTML, CSS, JavaScript, React</p>
+    </div>
+    <div class="skill">
+      <h4>Backend</h4>
+      <p>Node.js, Express, PostgreSQL</p>
+    </div>
+    <div class="skill">
+      <h4>Tools</h4>
+      <p>Git, GitHub, VS Code</p>
+    </div>
+    <div class="skill">
+      <h4>Concepts</h4>
+      <p>REST APIs, Testing, Agile</p>
+    </div>
+    <div class="skill uiux">
+      <h4>UI Design</h4>
+      <p>Figma, Adobe XD, Wireframing, Prototyping</p>
+    </div>
+    <div class="skill uiux">
+      <h4>UX Design</h4>
+      <p>User Research, Usability Testing, Interaction Design, Information Architecture</p>
+    </div>
+  </div>
+</section>
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="contact container reveal">
     <h3 class="label">CONTACT</h3>
     <p>Feel free to reach out if you'd like to collaborate.</p>
-    <div class="contact-links">
-      <a href="#">Email</a>
-      <a href="#">GitHub</a>
-      <a href="#">LinkedIn</a>
+    <br>
+    <div class="contact-links reveal">
+      <a href="zengetwasisipho@gmail.com">Email</a>
+      <a href="https://github.com/zengetwasisipho" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/yourprofile/" target="_blank">LinkedIn</a>
     </div>
   </section>
 
 </main>
 
-<!-- FOOTER -->
-<footer class="footer">
+<!-- ================= FOOTER ================= -->
+<footer class="footer reveal">
   <div class="container">
-    <p>© 2026 Sisipho</p>
+    <p>© 2026 Sisipho Zengetwa</p>
   </div>
 </footer>
 
+<!-- ================= SCRIPT ================= -->
+<script src="script.js"></script>
 </body>
 </html>
