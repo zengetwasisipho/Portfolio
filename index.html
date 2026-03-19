@@ -14,426 +14,197 @@
 <!-- ================= NAVIGATION ================= -->
 <nav class="nav">
   <div class="container nav-content">
-    <div class="logo">
-      <svg viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
-        <!-- S letter with gradient -->
-        <defs>
-          <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#7f5af0;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#ff6ec7;stop-opacity:1" />
-          </linearGradient>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-            <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-        </defs>
-        
-        <!-- Stylized S -->
-        <text x="10" y="33" font-size="28" font-weight="700" fill="url(#logoGradient)" 
-              font-family="Inter, sans-serif" class="logo-letter" filter="url(#glow)">S</text>
-        
-        <!-- Stylized Z -->
-        <text x="30" y="33" font-size="28" font-weight="700" fill="url(#logoGradient)" 
-              font-family="Inter, sans-serif" class="logo-letter" filter="url(#glow)">Z</text>
-        
-        <!-- Accent line underscore -->
-        <line x1="55" y1="38" x2="72" y2="38" stroke="#A6F1E0" stroke-width="2.5" 
-              stroke-linecap="round" class="logo-accent"/>
-      </svg>
+    <div class="logo">SZ</div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#about">About</a>
-      <a href="#projects">Work</a>
+      <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
-      <a href="resume.pdf" class="btn-resume">Download My CV</a>
     </div>
   </div>
 </nav>
 
 <main>
 
-  <!-- ================= LANDING ANIMATION ================= -->
-  <section class="landing-animation" id="landing">
-    <div class="animation-container">
-      <div class="illustration-wrapper">
-        <!-- Cute Code Illustration -->
-        <div class="cute-illustration code-illustration">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <!-- Monitor -->
-            <rect x="20" y="20" width="160" height="120" rx="8" fill="none" stroke="#ff9eff" stroke-width="3"/>
-            <!-- Screen -->
-            <rect x="30" y="30" width="140" height="90" fill="#1a1a2e" rx="4"/>
-            <!-- Code lines -->
-            <line x1="40" y1="45" x2="75" y2="45" stroke="#7f5af0" stroke-width="2" stroke-linecap="round"/>
-            <line x1="40" y1="60" x2="100" y2="60" stroke="#ff6ec7" stroke-width="2" stroke-linecap="round"/>
-            <line x1="40" y1="75" x2="85" y2="75" stroke="#7f5af0" stroke-width="2" stroke-linecap="round"/>
-            <line x1="40" y1="90" x2="95" y2="90" stroke="#ff6ec7" stroke-width="2" stroke-linecap="round"/>
-            <line x1="40" y1="105" x2="70" y2="105" stroke="#7f5af0" stroke-width="2" stroke-linecap="round"/>
-            <!-- Monitor stand -->
-            <rect x="85" y="150" width="30" height="30" fill="none" stroke="#ff9eff" stroke-width="2" rx="2"/>
-            <!-- Cursor -->
-            <g class="cursor-blink" transform="translate(110, 65)">
-              <rect width="3" height="15" fill="#7f5af0"/>
-            </g>
-          </svg>
-        </div>
-
-        <!-- Cute Design Illustration -->
-        <div class="cute-illustration design-illustration">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <!-- Palette circle background -->
-            <circle cx="100" cy="100" r="85" fill="none" stroke="#ddd0e3" stroke-width="2" opacity="0.3"/>
-            <!-- Paint Palette -->
-            <ellipse cx="100" cy="110" rx="50" ry="45" fill="none" stroke="#ff9eff" stroke-width="3"/>
-            <!-- Paint dots -->
-            <circle cx="65" cy="75" r="8" fill="#7f5af0" class="paint-dot" style="--delay: 0s"/>
-            <circle cx="100" cy="65" r="8" fill="#ff6ec7" class="paint-dot" style="--delay: 0.2s"/>
-            <circle cx="135" cy="75" r="8" fill="#6AECE1" class="paint-dot" style="--delay: 0.4s"/>
-            <circle cx="55" cy="110" r="8" fill="#a78bfa" class="paint-dot" style="--delay: 0.6s"/>
-            <circle cx="145" cy="110" r="8" fill="#f5a8d0" class="paint-dot" style="--delay: 0.8s"/>
-            <circle cx="75" cy="140" r="8" fill="#6AECE1" class="paint-dot" style="--delay: 1s"/>
-            <circle cx="125" cy="140" r="8" fill="#7f5af0" class="paint-dot" style="--delay: 1.2s"/>
-            <!-- Brush -->
-            <g class="brush-stroke">
-              <rect x="150" y="50" width="8" height="50" fill="#d4af37" rx="4"/>
-              <ellipse cx="154" cy="55" rx="12" ry="8" fill="#e8d5a4" opacity="0.7"/>
-            </g>
-          </svg>
-        </div>
-
-        <!-- Cute Bulb Illustration -->
-        <div class="cute-illustration idea-illustration">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <!-- Glow effect -->
-            <circle cx="100" cy="80" r="55" fill="#ff9eff" opacity="0.15" class="bulb-glow"/>
-            <!-- Bulb -->
-            <path d="M 100 30 C 120 30 130 45 130 60 C 130 75 120 90 100 95 L 100 95 C 80 90 70 75 70 60 C 70 45 80 30 100 30 Z" 
-                  fill="none" stroke="#ff9eff" stroke-width="3" stroke-linejoin="round"/>
-            <!-- Inner fill -->
-            <path d="M 100 30 C 120 30 130 45 130 60 C 130 75 120 90 100 95 L 100 95 C 80 90 70 75 70 60 C 70 45 80 30 100 30 Z" 
-                  fill="#ff9eff" opacity="0.2"/>
-            <!-- Base -->
-            <rect x="90" y="95" width="20" height="8" fill="none" stroke="#ff9eff" stroke-width="2" rx="2"/>
-            <!-- Threaded part -->
-            <rect x="85" y="103" width="30" height="20" fill="none" stroke="#ff9eff" stroke-width="2" rx="2"/>
-            <line x1="85" y1="108" x2="115" y2="108" stroke="#ff9eff" stroke-width="1"/>
-            <line x1="85" y1="113" x2="115" y2="113" stroke="#ff9eff" stroke-width="1"/>
-            <!-- Sparkles -->
-            <g class="sparkle" style="--delay: 0s">
-              <circle cx="50" cy="40" r="3" fill="#7f5af0"/>
-              <circle cx="50" cy="40" r="8" fill="none" stroke="#7f5af0" opacity="0.5"/>
-            </g>
-            <g class="sparkle" style="--delay: 0.3s">
-              <circle cx="150" cy="50" r="3" fill="#ff6ec7"/>
-              <circle cx="150" cy="50" r="8" fill="none" stroke="#ff6ec7" opacity="0.5"/>
-            </g>
-          </svg>
-        </div>
-      </div>
-
-      <div class="landing-text">
-        <h2 class="landing-title">Ready to build something amazing?</h2>
-        <p class="landing-subtitle">Scroll down to explore my work</p>
-        <div class="scroll-indicator">
-          <span>Scroll</span>
-          <div class="scroll-arrow">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 14L5 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M10 14L15 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ================= HERO SECTION ================= -->
-  <section class="hero container reveal">
-    <div class="hero-layout">
-
-      <!-- TEXT -->
-      <div class="hero-text">
-        <h1 class="name-display">
-          Hello,<br>
-          I'm Sisipho.
-        </h1>
-        <h2 class="role-text">Software Engineer | UI/UX Designer</h2>
-        <p class="description">
-          I build practical software that solves real problems and improves everyday workflows.
-        </p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn btn-filled">View Work</a>
-          <a href="#contact" class="btn btn-outline">Get in touch</a>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        
+        <!-- CENTER PROFILE IMAGE WITH YELLOW BG -->
+        <div class="hero-image-section">
+          <div class="profile-container">
+            <!-- Yellow background circle -->
+            <div class="yellow-bg"></div>
+            <!-- Profile image -->
+            <img src="images/profile.jpg" alt="Sisipho" class="profile-img">
+          </div>
+          <!-- Background portfolio image (pexels) -->
+          <img src="images/portfolio-bg.jpg" alt="Portfolio Background" class="portfolio-bg-img">
         </div>
-      </div>
 
-      <!-- IMAGE -->
-      <div class="hero-image reveal">
-        <img src="profile.png" alt="Sisipho">
-      </div>
+        <!-- RIGHT TEXT SECTION -->
+        <div class="hero-text">
+          <h1 class="name-display">
+            Hello,<br>
+            I'm Sisipho.
+          </h1>
+          <h2 class="role-text">Software Engineer<br>UI/UX Designer</h2>
 
+          <!-- CTA BUTTONS -->
+          <div class="hero-btns">
+            <a href="#projects" class="btn btn-filled">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+
+          <!-- ABOUT ME AT BOTTOM RIGHT -->
+          <div class="about-section">
+            <h3>About Me</h3>
+            <p>I'm a developer focused on building thoughtful, reliable software. My work emphasizes clean architecture and intuitive user experience.</p>
+            <p>I build practical software that solves real problems and improves everyday workflows.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
-  <section id="about" class="about container reveal">
-    <div class="about-header">
-      <h3 class="label">ABOUT ME</h3>
-      <p class="about-subtitle">Get to know the person behind the code</p>
-    </div>
-
-    <div class="about-content">
-      <!-- Main Bio -->
-      <div class="about-bio">
-        <div class="bio-text">
-          <p class="bio-intro">
-            I'm a final-year software engineering student at WeThinkCode, a rigorous coding bootcamp focused on practical development skills. Passionate about creating beautiful, functional digital experiences through clean code and thoughtful design.
-          </p>
-          
-          <p>
-            My education at WeThinkCode has given me hands-on experience in full-stack development and UI/UX design. I've worked on diverse projects—from building responsive web applications to designing intuitive user interfaces—each one pushing me to solve real-world problems with creative solutions.
-          </p>
-
-          <p>
-            I believe great software is where engineering excellence meets user-centered design. As I approach graduation, I'm eager to bring my skills, creativity, and dedication to meaningful projects that make a real impact. I'm passionate about continuous learning and excited about what's next in my tech journey.
-          </p>
+  <!-- ================= PROJECTS SECTION ================= -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Selected Projects</h2>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <span class="project-num">01</span>
+          <h3>SpendWise Tracker</h3>
+          <p>A subscription management tool helping users track recurring expenses. Built with React and Node.js.</p>
+          <a href="#" class="btn btn-filled">View Project</a>
         </div>
 
-        <div class="about-highlights">
-          <h4>Key Strengths</h4>
-          <div class="qualities-grid">
-            <div class="quality-item">
-              <div class="quality-number">01</div>
-              <div class="quality-content">
-                <h5>Problem Solver</h5>
-                <p>I approach challenges with curiosity and creativity, breaking down complex problems into elegant solutions.</p>
-              </div>
-            </div>
-            <div class="quality-item">
-              <div class="quality-number">02</div>
-              <div class="quality-content">
-                <h5>Detail Oriented</h5>
-                <p>Every pixel, every line of code matters. I obsess over the details that make products exceptional.</p>
-              </div>
-            </div>
-            <div class="quality-item">
-              <div class="quality-number">03</div>
-              <div class="quality-content">
-                <h5>Fast Learner</h5>
-                <p>I quickly grasp new technologies and methodologies, adapting to challenges with enthusiasm and determination.</p>
-              </div>
-            </div>
-            <div class="quality-item">
-              <div class="quality-number">04</div>
-              <div class="quality-content">
-                <h5>Collaborative</h5>
-                <p>I thrive in team environments, communicating ideas clearly and learning from diverse perspectives.</p>
-              </div>
-            </div>
-          </div>
+        <div class="project-card">
+          <span class="project-num">02</span>
+          <h3>Daily Task Automator</h3>
+          <p>Chrome extension automating repetitive workflow tasks. Increases productivity by managing daily routines efficiently.</p>
+          <a href="#" class="btn btn-filled">View Project</a>
+        </div>
+
+        <div class="project-card">
+          <span class="project-num">03</span>
+          <h3>UI Component Library</h3>
+          <p>A reusable component library built with React. Designed for consistency and accessibility across web applications.</p>
+          <a href="#" class="btn btn-filled">View Project</a>
         </div>
       </div>
-
-      <!-- Stats & Fun Facts -->
-      <div class="about-stats">
-        <div class="stats-container">
-          <div class="stat-card">
-            <div class="stat-number">2</div>
-            <div class="stat-label">Years at WeThinkCode</div>
-            <p>Rigorous training in software development</p>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">15+</div>
-            <div class="stat-label">Projects Completed</div>
-            <p>From academic assignments to personal builds</p>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Commitment</div>
-            <p>Dedicated to excellence and continuous growth</p>
-          </div>
-        </div>
-
-        <div class="fun-facts">
-          <h4>Beyond the Code</h4>
-          <div class="facts-list">
-            <div class="fact-item">
-              <div class="fact-visual">
-                <img src="images/gaming.jpg" alt="Gaming" class="fact-image">
-              </div>
-              <div class="fact-content">
-                <span class="fact-icon">🎮</span>
-                <p>Gaming enthusiast who studies game design and understands player experience mechanics</p>
-              </div>
-            </div>
-            <div class="fact-item">
-              <div class="fact-content">
-                <span class="fact-icon">📚</span>
-                <p>Lifelong learner exploring tech blogs, design principles, and emerging technologies</p>
-              </div>
-              <div class="fact-visual">
-                <img src="images/reading.jpg" alt="Reading" class="fact-image">
-              </div>
-            </div>
-            <div class="fact-item">
-              <div class="fact-visual">
-                <img src="images/music.jpg" alt="Music" class="fact-image">
-              </div>
-              <div class="fact-content">
-                <span class="fact-icon">🎵</span>
-                <p>Believer that good UI design flows like music—intuitive, seamless, and satisfying</p>
-              </div>
-            </div>
-            <div class="fact-item">
-              <div class="fact-content">
-                <span class="fact-icon">🌍</span>
-                <p>Coffee lover and tech explorer, passionate about building tools that improve people's lives</p>
-              </div>
-              <div class="fact-visual">
-                <img src="images/coffee.jpg" alt="Coffee" class="fact-image">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CTA Section -->
-    <div class="about-cta">
-      <h3>Let's collaborate and build something great</h3>
-      <p>I'm looking for internship opportunities and exciting projects to apply my skills. If you have a project in mind or want to discuss technology and design, I'd love to connect!</p>
-      <a href="#contact" class="btn btn-filled">Get In Touch</a>
     </div>
   </section>
 
-  <!-- ================= PROJECTS ================= -->
-  <section id="projects" class="projects container reveal">
-    <h3 class="label">SELECTED PROJECTS</h3>
-
-    <div class="project-card reveal">
-      <img src="images/spendwise.png" alt="SpendWise Preview" class="project-img">
-      <div class="project-info">
-        <span class="project-num">01</span>
-        <h4>SpendWise Tracker</h4>
-        <p>A subscription management tool helping users track recurring expenses and manage their finances effectively.</p>
-        <a href="https://zengetwasisipho.github.io/spendwise-app/" class="btn btn-filled" target="_blank">VIEW PROJECT</a>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ================= SKILLS ================= -->
-<section id="skills" class="skills reveal">
-  <div class="skills-header">
-    <h3 class="label">EXPERTISE</h3>
-    <p class="skills-subtitle">A blend of technical prowess and creative design thinking</p>
-  </div>
-  
-  <div class="skills-container">
-    <div class="skills-category">
-      <h4 class="category-title">💻 Development</h4>
+  <!-- ================= SKILLS SECTION ================= -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      
       <div class="skills-grid">
-        <div class="skill-item">
-          <div class="skill-icon">◇</div>
-          <h5>Frontend</h5>
-          <p>HTML, CSS, JavaScript, React</p>
+        <div class="skill-card">
+          <h3>Frontend Development</h3>
+          <p>HTML, CSS, JavaScript, React, Vue.js, Responsive Design</p>
         </div>
-        <div class="skill-item">
-          <div class="skill-icon">◇</div>
-          <h5>Backend</h5>
-          <p>Node.js, Express, PostgreSQL</p>
+        <div class="skill-card">
+          <h3>Backend Development</h3>
+          <p>Node.js, Express, PostgreSQL, MongoDB, REST APIs</p>
         </div>
-        <div class="skill-item">
-          <div class="skill-icon">◇</div>
-          <h5>Tools & Workflow</h5>
-          <p>Git, GitHub, VS Code, Agile</p>
+        <div class="skill-card">
+          <h3>Design</h3>
+          <p>Figma, Adobe XD, Wireframing, Prototyping, UI/UX</p>
         </div>
-        <div class="skill-item">
-          <div class="skill-icon">◇</div>
-          <h5>Architecture</h5>
-          <p>REST APIs, Testing, Design Patterns</p>
+        <div class="skill-card">
+          <h3>Tools & Methods</h3>
+          <p>Git, GitHub, VS Code, Testing, Agile, CI/CD</p>
         </div>
-      </div>
-    </div>
-
-    <div class="skills-category">
-      <h4 class="category-title">🎨 Design</h4>
-      <div class="skills-grid">
-        <div class="skill-item design-item">
-          <div class="skill-icon">✦</div>
-          <h5>UI Design</h5>
-          <p>Figma, Adobe XD, Wireframing, Prototyping</p>
+        <div class="skill-card">
+          <h3>Problem Solving</h3>
+          <p>System Design, Optimization, Debugging, Architecture</p>
         </div>
-        <div class="skill-item design-item">
-          <div class="skill-icon">✦</div>
-          <h5>UX Design</h5>
-          <p>User Research, Usability Testing, IA</p>
-        </div>
-        <div class="skill-item design-item">
-          <div class="skill-icon">✦</div>
-          <h5>Visual Design</h5>
-          <p>Color Theory, Typography, Branding</p>
-        </div>
-        <div class="skill-item design-item">
-          <div class="skill-icon">✦</div>
-          <h5>Interaction Design</h5>
-          <p>Micro-interactions, Animation, Transitions</p>
+        <div class="skill-card">
+          <h3>Communication</h3>
+          <p>Collaboration, Documentation, Presentations, Mentoring</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="contact container reveal">
-    <div class="contact-header">
-      <h3 class="label">GET IN TOUCH</h3>
-      <p class="contact-intro">Let's collaborate and create something amazing together</p>
-    </div>
-    
-    <div class="contact-content">
-      <div class="contact-info">
-        <div class="info-card">
-          <div class="info-icon">✉️</div>
-          <h4>Email</h4>
-          <p>Reach out for inquiries and opportunities</p>
-          <a href="mailto:zengetwasisipho@gmail.com" class="contact-link">zengetwasisipho@gmail.com</a>
+  <!-- ================= TESTIMONIALS SECTION ================= -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What People Say</h2>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Sisipho delivered an exceptional user interface for our web application. Their attention to detail and understanding of UX principles was impressive."</p>
+          <div class="testimonial-author">Sarah Johnson</div>
+          <div class="testimonial-role">Product Manager at TechCorp</div>
         </div>
 
-        <div class="info-card">
-          <div class="info-icon">💼</div>
-          <h4>GitHub</h4>
-          <p>Check out my projects and contributions</p>
-          <a href="https://github.com/zengetwasisipho" target="_blank" class="contact-link">github.com/zengetwasisipho</a>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Working with Sisipho was a pleasure. They completed our project on time and the code quality was outstanding. Very professional."</p>
+          <div class="testimonial-author">Michael Chen</div>
+          <div class="testimonial-role">CTO at StartupHub</div>
         </div>
 
-        <div class="info-card">
-          <div class="info-icon">🔗</div>
-          <h4>LinkedIn</h4>
-          <p>Connect with me professionally</p>
-          <a href="https://www.linkedin.com/in/yourprofile/" target="_blank" class="contact-link">linkedin.com/in/yourprofile</a>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Sisipho transformed our old application into a modern, efficient system. Their technical skills and creative problem-solving made all the difference."</p>
+          <div class="testimonial-author">Emma Williams</div>
+          <div class="testimonial-role">CEO at BuildCo</div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="contact-cta">
-        <h3>Ready to work together?</h3>
-        <p>Feel free to reach out through any of the channels above. I'm always excited about new projects and opportunities!</p>
-        <a href="mailto:zengetwasisipho@gmail.com" class="btn btn-filled">Start a Conversation</a>
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-intro">I'm always interested in hearing about new projects and opportunities.</p>
+      
+      <div class="contact-links">
+        <a href="mailto:zengetwasisipho@gmail.com" class="btn btn-filled">Send Email</a>
+        <a href="#" class="btn btn-outline">Schedule a Call</a>
       </div>
     </div>
   </section>
 
 </main>
 
+<!-- ================= SOCIAL LINKS - BOTTOM RIGHT ================= -->
+<div class="social-links">
+  <a href="mailto:zengetwasisipho@gmail.com" target="_blank" title="Email">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+      <path d="m22 7-10 5L2 7"></path>
+    </svg>
+  </a>
+  <a href="https://linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+      <circle cx="4" cy="4" r="2"></circle>
+    </svg>
+  </a>
+  <a href="https://github.com/zengetwasisipho" target="_blank" title="GitHub">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+    </svg>
+  </a>
+</div>
+
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
-  <div class="container">
-    <p>© 2026 Sisipho Zengetwa</p>
-  </div>
+  <p>© 2026 Sisipho Zengetwa</p>
 </footer>
 
 <!-- ================= SCRIPT ================= -->

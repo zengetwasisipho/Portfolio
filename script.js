@@ -1,68 +1,45 @@
-// ========================= NAVBAR & REVEAL SCRIPT =========================
+// ========================= HAMBURGER MENU & SCROLL =========================
 
 // SELECT ELEMENTS
 const nav = document.querySelector(".nav");
-const reveals = document.querySelectorAll(".reveal");
-const landingAnimation = document.getElementById("landing");
-let hasScrolled = false;
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
-// ========================= FUNCTION TO CHECK AND REVEAL ELEMENTS =========================
-function checkReveals() {
-  reveals.forEach((el) => {
-    const top = el.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if (top < windowHeight - 100) { // trigger point
-      el.classList.add("active");
-    }
-  });
-}
-
-// ========================= AUTO-HIDE LANDING ANIMATION =========================
-window.addEventListener("load", () => {
-  checkReveals();
-  
-  // Auto-hide landing animation after 3 seconds
-  setTimeout(() => {
-    if (landingAnimation) {
-      landingAnimation.classList.add("hidden");
-    }
-  }, 3000);
+// ========================= HAMBURGER MENU TOGGLE =========================
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active");
 });
 
-// ========================= LANDING ANIMATION FADE OUT ON SCROLL =========================
+// Close menu when a link is clicked
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  });
+});
+
+// ========================= NAVBAR SCROLL EFFECT =========================
 window.addEventListener("scroll", () => {
-  // Hide landing animation on first scroll
-  if (!hasScrolled && window.scrollY > 0) {
-    hasScrolled = true;
-    if (landingAnimation) {
-      landingAnimation.classList.add("hidden");
-    }
-  }
-
-  // ===== REVEAL ELEMENTS =====
-  checkReveals();
-
-  // ===== NAVBAR SCROLL EFFECT =====
-  if (window.scrollY > 50) { // change after 50px scroll
+  if (window.scrollY > 50) {
     nav.classList.add("scrolled");
   } else {
     nav.classList.remove("scrolled");
   }
-
-}, { passive: true });
+});
 
 // ========================= SMOOTH SCROLL FOR NAV LINKS =========================
-const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
-
-navLinks.forEach(link => {
+document.querySelectorAll(".nav-links a[href^='#']").forEach(link => {
   link.addEventListener("click", function(e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
+    const targetId = this.getAttribute("href");
+    const target = document.querySelector(targetId);
+    
     if(target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+      const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth"
       });
     }
   });
