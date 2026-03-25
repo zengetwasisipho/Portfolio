@@ -146,3 +146,18 @@ body.dark-mode .form-group input, body.dark-mode .form-group textarea {backgroun
   .social-icon {width: 45px;height: 45px;}
   .social-icon svg {width: 20px;height: 20px;}
 }
+.hero-social {display: flex;gap: 1rem;margin-top: 2rem;}
+.hero-social-link {width: 40px;height: 40px;display: flex;align-items: center;justify-content: center;background: linear-gradient(135deg, var(--accent) 0%, #ffb6d9 100%);border-radius: 8px;color: #ffffff;transition: all 0.3s ease;text-decoration: none;}
+.hero-social-link svg {width: 20px;height: 20px;}
+.hero-social-link:hover {transform: translateY(-3px);box-shadow: 0 8px 15px rgba(255, 105, 180, 0.3);}
+.education-section {padding: 6rem 2rem;background: var(--bg);margin: 3rem 0;}
+.education-section h2 {margin-bottom: 3rem;text-align: center;background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;}
+.education-grid-full {display: grid;grid-template-columns: 1fr;gap: 2rem;margin-bottom: 2rem;}
+.education-card-full {display: grid;grid-template-columns: 200px 1fr;gap: 2rem;padding: 2rem;background: linear-gradient(135deg, rgba(255, 182, 217, 0.05) 0%, rgba(255, 105, 180, 0.02) 100%);border: 1px solid var(--border);border-radius: 12px;transition: all 0.3s ease;align-items: start;}
+.education-card-full:hover {transform: translateY(-3px);box-shadow: 0 10px 25px rgba(255, 105, 180, 0.15);border-color: var(--accent);}
+.education-card-logo {width: 180px;height: 180px;display: flex;align-items: center;justify-content: center;background: linear-gradient(135deg, rgba(255, 105, 180, 0.1), rgba(255, 182, 217, 0.08) 100%);border-radius: 10px;}
+.education-card-logo img {width: 100%;height: 100%;object-fit: contain;}
+.education-card-content h3 {font-size: 1.5rem;color: var(--text);margin-bottom: 0.5rem;}
+.education-degree {color: var(--accent);font-size: 0.95rem;margin-bottom: 1rem;}
+.education-description {color: var(--text-secondary);line-height: 1.7;margin: 0;}
+@media (max-width: 768px) {.education-card-full {grid-template-columns: 1fr;gap: 1.5rem;}.education-card-logo {width: 100%;height: auto;min-height: 150px;}.hero-social {gap: 0.8rem;}.hero-social-link {width: 35px;height: 35px;}.hero-social-link svg {width: 18px;height: 18px;}}
