@@ -595,6 +595,10 @@ body.dark-mode .scard-logo.github-logo { filter: invert(1); }
   object-position: center 38%;
 }
 
+.pj-img--route {
+  object-position: center top;
+}
+
 .pj-image-overlay {
   position: absolute; inset: 0;
   background: rgba(10, 5, 8, 0.45);
